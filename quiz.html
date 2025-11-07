@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initiation Quiz // The Binary Serpents</title>
+  <meta name="description" content="Cyberpunk initiation quiz for recruitment into The Binary Serpents." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="glitch" data-text="THE INITIATION">THE INITIATION</h1>
+    <p>Choose as the Serpents would. There are no wrong answers—only the path you carve in neon and static.</p>
+
+    <form id="initiationQuiz" class="quiz" novalidate>
+      <!-- Question 1 -->
+      <fieldset>
+        <legend>Question 1</legend>
+        <p class="q">A rival crew shorts your payment. Do you:</p>
+        <label class="option">
+          <input type="radio" name="q1" value="enforcer" />
+          <span>Confront them in their territory, ready for a fight.</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="q1" value="netrunner" />
+          <span>Hack their mainframe and take double.</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="q1" value="fixer" />
+          <span>Find their supplier and cut a better deal.</span>
+        </label>
+      </fieldset>
+
+      <!-- Question 2 -->
+      <fieldset>
+        <legend>Question 2</legend>
+        <p class="q">A data-pak with corps secrets lands in your lap. Do you:</p>
+        <label class="option">
+          <input type="radio" name="q2" value="fixer" />
+          <span>Find the highest bidder and sell it, no questions asked.</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="q2" value="netrunner" />
+          <span>Leak it to a data-broker known for causing chaos.</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="q2" value="enforcer" />
+          <span>Use it to blackmail the corp executive who lost it.</span>
+        </label>
+      </fieldset>
+
+      <!-- Question 3 -->
+      <fieldset>
+        <legend>Question 3</legend>
+        <p class="q">Your fixer gives you a 'simple' job. You know it's a setup. Do you:</p>
+        <label class="option">
+          <input type="radio" name="q3" value="netrunner" />
+          <span>Counter-hack the fixer to see who they're really working for.</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="q3" value="fixer" />
+          <span>Disappear. Lay low, find a new contact, and live to see another cycle.</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="q3" value="enforcer" />
+          <span>Go to the meet anyway, but bring heavy muscle and a loaded shotgun.</span>
+        </label>
+      </fieldset>
+
+      <div class="actions">
+        <button id="submitBtn" type="submit" class="btn">SUBMIT APPLICATION</button>
+      </div>
+      <p class="notice">Client-side only. Your fate is calculated in-browser.</p>
+    </form>
+  </main>
+  <footer>&copy; 2025 The Binary Serpents // Static Quiz</footer>
+  <script src="quiz.js"></script>
+</body>
+</html>
