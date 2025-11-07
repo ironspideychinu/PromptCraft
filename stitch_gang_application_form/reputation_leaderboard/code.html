@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rep Leaderboard - NeoCity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a60df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                        "cyan-accent": "#00f6ff",
+                        "magenta-accent": "#ff00ff",
+                        "green-accent": "#39ff14",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glitch-text {
+            text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75), -0.025em -0.05em 0 rgba(0, 246, 255, 0.75), 0.025em 0.05em 0 rgba(57, 255, 20, 0.75);
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex h-screen w-64 flex-col bg-black/30 backdrop-blur-sm border-r border-primary/20 p-4 sticky top-0">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User avatar for Glitch_Runner_77" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3HsOyh6clBS0mezR1z00D249yRzrjZurdbbdbrNYhPaFbrx5721Ym9_FAxXqUm6OB-Dbk1aaSePwi7U-iYEpXRs8d73yIVBX-6S3DlhqGWaHtkcDPQQRe4a0aAuitpTere6TrKwncp4U3qrAa5WHxfLR1mtX6YmKQTMvyA7NVXDPsUocLLw7NN-Td-7LgzBAKmPF5_Pk91GT2XpF_wxLZ3ZP5WH0YcH0Q1fK0fswrNXkFCg1BNd13heHOKrnFjrrqRYGsBGAxxw");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Glitch_Runner_77</h1>
+<p class="text-[#b09cba] text-sm font-normal leading-normal">Netrunner</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-8">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">send</span>
+<p class="text-sm font-medium leading-normal">Missions</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/30 text-white" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<p class="text-sm font-medium leading-normal">Rep Leaderboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">shield</span>
+<p class="text-sm font-medium leading-normal">Safehouse</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Crew Roster</p>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-4">
+<div class="flex flex-col gap-1 border-t border-primary/20 pt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/80 transition-colors">
+<span class="truncate">Log Out</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<!-- PageHeading -->
+<header class="flex flex-wrap justify-between items-center gap-3 p-4">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72 glitch-text">REP LEADERBOARD</h1>
+</header>
+<!-- MetaText -->
+<p class="text-magenta-accent text-sm font-normal leading-normal pb-3 pt-1 px-4">Rep is everything in this city. Make your mark.</p>
+<!-- Top 3 Showcase -->
+<section>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Top 3 Crew</h2>
+<!-- ImageGrid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+<div class="bg-cover bg-center flex flex-col justify-end p-4 rounded-xl aspect-[3/4] border-2 border-magenta-accent/50 shadow-[0_0_15px_rgba(255,0,255,0.5)]" data-alt="Cyberpunk character Nyx, ranked number 2" style='background-image: linear-gradient(0deg, rgba(28, 16, 34, 0.9) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQ38vOake9D_MKXer4-vQY71LflZZNsoCi2KtCCAj7ipsZV5Z3nL8-RJN53TF6y3ja4pJrTZXjI32--UOU4xZZmGM9-2-W9A4V02Sjke1HgzmqTsdxHVschsWPoHiwwQ3iMpksmKP9hInhCrzXY9fstNBzlran1NyeMMB9eBM9nCP0ahDmMc3pqig6-0is6L-8hWGcQMEU6Xe6zQ86ZvSpxAZvjkTTIUJ5hfrpgXS4P9R3hLuzeIAvEMFNfx_ZofcGdRdjnLbbdg");'>
+<p class="text-white text-2xl font-bold leading-tight line-clamp-3 glitch-text">#2 Cipher</p>
+<p class="text-magenta-accent text-sm">9,850 RP</p>
+</div>
+<div class="bg-cover bg-center flex flex-col justify-end p-4 rounded-xl aspect-[3/4] border-2 border-cyan-accent/70 shadow-[0_0_25px_rgba(0,246,255,0.6)] scale-110 z-10" data-alt="Cyberpunk character Nyx, ranked number 1" style='background-image: linear-gradient(0deg, rgba(28, 16, 34, 0.9) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOv2URabSLr1LRguuidOcLHcCzRz2RtcYhxSm9Z1KtnfUB2mJDoQZK4AzOph9vB6TCPUIWHCtGtcnXjvkX_VKyn-hqXemIwZ_zmBi0F9MUbfTKo3A0md845HCRxeZiQjf_hY_p2_32xRQM21LW2kt1MRv3Ve8WFrzVkrHJJyf8wlVBwt2p7mHTJiQRbE2RSA6QQnw3Qmd90BXONcxFol56l0ogTWU3v_4F1qwinvaEte6lpuF5hWqELbh6PKaXQhWlkDf_4ZhxlQ");'>
+<p class="text-white text-3xl font-bold leading-tight line-clamp-3 glitch-text">#1 Nyx</p>
+<p class="text-cyan-accent text-lg">12,300 RP</p>
+</div>
+<div class="bg-cover bg-center flex flex-col justify-end p-4 rounded-xl aspect-[3/4] border-2 border-green-accent/50 shadow-[0_0_15px_rgba(57,255,20,0.5)]" data-alt="Cyberpunk character Jaxx, ranked number 3" style='background-image: linear-gradient(0deg, rgba(28, 16, 34, 0.9) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEKtOm3dwZI1ZtVF1KL-9zKziYJSTBSF3EdkF4ImKIkl4X6NQBudfoHDaJebHskPf22gyXkIBBSViHZAt0QwUMLjTIhYV9W5QrG5xuPFYMyR0fTxd6k-gFeGFrS2tiiKwc4bEN-T4yRpR4rbo6TL61cezcPTTyrOqL5Svwr_uVjAZ-QfFWZMfgYnE0G39SeJqd55aH4LT_WOqJ1fQ-60JH3qGY29cthEWlVe6L9sY2S99TghgH6Z2vg5lnfr_YaRagdlflD6i6qg");'>
+<p class="text-white text-2xl font-bold leading-tight line-clamp-3 glitch-text">#3 Jaxx</p>
+<p class="text-green-accent text-sm">9,200 RP</p>
+</div>
+</div>
+</section>
+<!-- Leaderboard Table Section -->
+<section class="mt-12">
+<div class="flex justify-between items-center px-4 mb-4">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Full Standings</h2>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 text-sm font-semibold rounded-lg bg-primary/30 text-white border border-primary">All-Time RP</button>
+<button class="px-3 py-1 text-sm font-semibold rounded-lg bg-white/10 text-white/70 hover:bg-primary/20 hover:text-white">Weekly Gain</button>
+<button class="px-3 py-1 text-sm font-semibold rounded-lg bg-white/10 text-white/70 hover:bg-primary/20 hover:text-white">Success Rate</button>
+</div>
+</div>
+<div class="overflow-hidden rounded-xl border border-primary/20 bg-black/20 backdrop-blur-sm">
+<table class="w-full text-left text-sm text-white/90">
+<thead class="bg-white/5 border-b border-primary/20 uppercase text-xs text-white/50 tracking-wider">
+<tr>
+<th class="px-6 py-3" scope="col">Rank</th>
+<th class="px-6 py-3" scope="col">Alias</th>
+<th class="px-6 py-3 text-right" scope="col">Reputation (RP)</th>
+<th class="px-6 py-3 text-center" scope="col">Success Rate</th>
+<th class="px-6 py-3 text-center" scope="col">Threat Level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-primary/10 hover:bg-primary/10">
+<td class="px-6 py-4 font-bold text-cyan-accent">1</td>
+<td class="px-6 py-4"><div class="flex items-center gap-3"><img alt="Avatar for Nyx" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhjMRTNmRHPOS_nTNxPpg--tcKg-suGpHKHHyJfx4Ebq3gq3e1CwngbPvlXhE15n3rcTcPYk2H_1tf4EiQnicO5oXWTU3KxyfvCIz4GVZbXFoi4S4vw9lhLVmlOtcg8ejiPLJXsdXGhLWrtwA11_YaD04BH5qRWLMbbaeSyy1xY8WEkK-TlChSbM7D7_KsbHOvGxepiA9l5wkW54WT1FMd_Frq2WNsQYUFnR03rDRbSFs4AYM1n3pXL_Igy5QcfRPenE240PwQ0g"/>Nyx</div></td>
+<td class="px-6 py-4 text-right font-mono">12,300</td>
+<td class="px-6 py-4 text-center font-mono">98%</td>
+<td class="px-6 py-4 text-center font-bold text-red-500">CRITICAL</td>
+</tr>
+<tr class="border-b border-primary/10 hover:bg-primary/10">
+<td class="px-6 py-4 font-bold text-magenta-accent">2</td>
+<td class="px-6 py-4"><div class="flex items-center gap-3"><img alt="Avatar for Cipher" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9aghWteOpjZ1mAprmGFPUKGeSaHJ2-TrCV8xdXd00scTaNzmVEuA6KhcU_ZuWqGZ-JYYheuAdfQv5vWjC6Ua3LYDHPcTMbP01NzzLRkuMCr18R4ULMRkvq4-XaOP_pDvkXtl5OhkyhgbMbYpSi76ALGp5Xyy63QemdINhRS2RCIsFXBD1RDbvR7ovTTsNcuyfQYJPkWxowq1K3KT-_rE8OWD-2Y3MibHvjpCpbZuet6UMjRurA_mxfqPaLER6A2pYORLojqRgEQ"/>Cipher</div></td>
+<td class="px-6 py-4 text-right font-mono">9,850</td>
+<td class="px-6 py-4 text-center font-mono">95%</td>
+<td class="px-6 py-4 text-center font-bold text-orange-500">HIGH</td>
+</tr>
+<tr class="border-b border-primary/10 hover:bg-primary/10">
+<td class="px-6 py-4 font-bold text-green-accent">3</td>
+<td class="px-6 py-4"><div class="flex items-center gap-3"><img alt="Avatar for Jaxx" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJIr7XAnmM0Y5Y6hLaF1VYwwj-aq1c1OjWAsDf6ytKOOBhvENPE5T9x8hhFFSuuBbF_7EMmIXH0yiR4QftQZr7sN3Q7xQ9cAfAVC20HcN-ELDaVLVHjvUIfOYBi2ry1bM7_tvW-QhaF9gNLyhvjgX4JF5xz61L0FWohxiwM5IyPLKIi8A9l8dV19lt9WBXGzi2Q_inczJqMEqrOvrPDAowsgIwargNEg_sTzWN4VRZ3FmphwZfqerX7O4ZZpO8toYo8tJ9PYiEnA"/>Jaxx</div></td>
+<td class="px-6 py-4 text-right font-mono">9,200</td>
+<td class="px-6 py-4 text-center font-mono">92%</td>
+<td class="px-6 py-4 text-center font-bold text-orange-500">HIGH</td>
+</tr>
+<tr class="border-b border-primary/10 hover:bg-primary/10">
+<td class="px-6 py-4">4</td>
+<td class="px-6 py-4"><div class="flex items-center gap-3"><img alt="Avatar for Echo" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA3qeLV4cqvXVqEDpPJ4-8PyRoXXR86YGUM6MR4CYE_eBWmk5P--j46BNWSdoV0xHyqsXLZf0Y1WK5tHqD71tQcAxGaTn0qxMzYMEd5bEAsQaG43UPAv3ycvrBnKSWRt6RLEZnHMbDEGQeqtY25QSQxdcuhRP1N_CQN0FLDmGvZMAr7LLe0afGXbdPlVEBEiB8pFVcPkjhz6Eg2Q0XIIhWNKll3L723u0hsCEbsafi5CIe3QN-dd5rUX1E0u-tDJH5uBSqAc9mDg"/>Echo</div></td>
+<td class="px-6 py-4 text-right font-mono">8,500</td>
+<td class="px-6 py-4 text-center font-mono">88%</td>
+<td class="px-6 py-4 text-center font-bold text-yellow-400">MODERATE</td>
+</tr>
+<tr class="border-b-2 border-primary bg-primary/20 shadow-[0_0_15px_rgba(166,13,242,0.5)]">
+<td class="px-6 py-4 font-bold">5</td>
+<td class="px-6 py-4"><div class="flex items-center gap-3"><img alt="Avatar for Glitch_Runner_77" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrQGeND1XZa74ULzstZA_Jhz_Cuk8nk48Jhdn6w_R8NWoyoqmfEwU225c26arST-zAN6pMpe__8ZyYs8blAH1ctDLOyIiLtC-EBxxZLd_gktE0QrmI6wZdLinlC23mXKXL5H43NZFBBCZ7KvB5fHUKHEkcdFfGkdjWp4Hl68i8qKiweq8N9rojwUUTvvU7-S9Hx-VO1UVthFyIRV7O0lB6xGbcGOp7ZWLiCPiRumraakmdfHG100kIfoQS3IpE2JX7rQcRkMmh1A"/>Glitch_Runner_77</div></td>
+<td class="px-6 py-4 text-right font-mono">8,120</td>
+<td class="px-6 py-4 text-center font-mono">91%</td>
+<td class="px-6 py-4 text-center font-bold text-yellow-400">MODERATE</td>
+</tr>
+<tr class="border-b border-primary/10 hover:bg-primary/10">
+<td class="px-6 py-4">6</td>
+<td class="px-6 py-4"><div class="flex items-center gap-3"><img alt="Avatar for Vex" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo9uY2ofK-hWOLx_7Juy5N-Zd5ZQS5-zHmNm_M-QRStP5Ft_qzIDjufIMc_LOAopjii5mY5HXqQtLGm-CTSzcnrUHmrgPc8Z6TE6CIQrkuFeHkBoPdrybjz7tcMOo5sK7Rhlu6odSzh572at8ulwK-5mp2GZVq90rYbMpKBdbVa4kkMO1OPgq8jqeoKCrsyFPbXXeHEUvD2flSqB6V6Zsl-BP835ff2g3LQk_9m0fpOAElqh2Wvq9-FeBXFWBKy2sO-cYCDcKc_w"/>Vex</div></td>
+<td class="px-6 py-4 text-right font-mono">7,900</td>
+<td class="px-6 py-4 text-center font-mono">85%</td>
+<td class="px-6 py-4 text-center font-bold text-yellow-400">MODERATE</td>
+</tr>
+<tr class="hover:bg-primary/10">
+<td class="px-6 py-4">7</td>
+<td class="px-6 py-4"><div class="flex items-center gap-3"><img alt="Avatar for Razor" class="h-8 w-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvLSri065n7OXdu3yrkSHo6sJDb37B5cyIC39cPHGePEqE1RD6TOe3R1uixZFxFZ5b8xsrsKjYgPOQpTKZmE2rYhGstWSZvo-Xre4mkQvKdi8twkjZPY-F-OboTpSw-Mg6MPKNbqz2PNR7UkIBtnmvxnlY1nwaVMe67ZGfO6NJ8x9F0vRlOURA5rnLe0ZMyORfi00yTdb0Bint66OtbN4X1KoGeaM9Jj3cBNtvaFjom5YXOzSfDek95jNicUEc-CIj1spQv_jpgw"/>Razor</div></td>
+<td class="px-6 py-4 text-right font-mono">7,550</td>
+<td class="px-6 py-4 text-center font-mono">89%</td>
+<td class="px-6 py-4 text-center font-bold text-green-500">LOW</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- User's Rank Summary Sticky -->
+<div class="fixed bottom-0 right-0 m-8 bg-black/50 backdrop-blur-md p-4 rounded-xl border border-primary/30 w-80 shadow-lg shadow-primary/10">
+<h3 class="text-white font-bold text-lg">Your Current Standing</h3>
+<div class="mt-4 flex justify-between items-baseline">
+<span class="text-white/70">Rank</span>
+<span class="text-3xl font-black text-white glitch-text">#5</span>
+</div>
+<div class="mt-2 flex justify-between items-baseline">
+<span class="text-white/70">Reputation</span>
+<span class="text-xl font-bold text-primary">8,120 RP</span>
+</div>
+<div class="mt-2 flex justify-between items-center">
+<span class="text-white/70">Progression</span>
+<span class="text-lg font-bold text-green-accent flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+                        +5
+                    </span>
+</div>
+<div class="w-full bg-primary/20 rounded-full h-1.5 mt-4">
+<div class="bg-primary h-1.5 rounded-full" style="width: 65%"></div>
+</div>
+<p class="text-xs text-white/50 text-right mt-1">Next rank at 8,500 RP</p>
+</div>
+</main>
+</div>
+</body></html>

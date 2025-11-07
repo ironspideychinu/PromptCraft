@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cyber Gang Mission Board</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#a60df2",
+            "background-light": "#f7f5f8",
+            "background-dark": "#161118",
+            "accent-cyan": "#00f0ff",
+            "accent-magenta": "#ff00ff",
+            "accent-green": "#39ff14",
+            "accent-amber": "#ffbf00",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+
+    .critical .material-symbols-outlined {
+      color: #ff00ff;
+    }
+
+    .primary .material-symbols-outlined {
+      color: #00f0ff;
+    }
+
+    .secondary .material-symbols-outlined {
+      color: #ffbf00;
+    }
+
+    .completed .material-symbols-outlined {
+      color: #39ff14;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="flex flex-col h-screen overflow-hidden">
+<!-- Top Nav Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-accent-cyan/20 px-6 py-3 shrink-0">
+<div class="flex items-center gap-4 text-accent-cyan">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-accent-cyan text-lg font-bold leading-tight tracking-[-0.015em]">CYBER_GANG_LOGO</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-accent-cyan transition-colors" href="#">V01D_R1DER</a>
+<p class="text-accent-cyan text-sm font-medium leading-normal">NCT 23:47:12</p>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/5 hover:bg-white/10 text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 border border-accent-cyan/20">
+<span class="material-symbols-outlined text-accent-cyan text-xl">logout</span>
+</button>
+</div>
+</header>
+<div class="flex grow overflow-hidden">
+<!-- Left Sidebar -->
+<aside class="w-[350px] shrink-0 flex flex-col border-r border-accent-cyan/20 overflow-y-auto">
+<div class="p-4 border-b border-accent-cyan/20">
+<label class="flex flex-col w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-12">
+<div class="text-accent-cyan flex bg-[#332839]/50 items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#332839]/50 h-full placeholder:text-white/50 px-4 rounded-l-none pl-2 text-base font-normal leading-normal focus:ring-accent-cyan" placeholder="Filter missions by codename..." value=""/>
+</div>
+</label>
+</div>
+<nav class="flex flex-col gap-2 p-4 border-b border-accent-cyan/20">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-accent-magenta/20 border border-accent-magenta" href="#">
+<span class="material-symbols-outlined text-accent-magenta">priority_high</span>
+<p class="text-white text-sm font-medium leading-normal">CRITICAL</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent-cyan/10" href="#">
+<span class="material-symbols-outlined text-accent-cyan">my_location</span>
+<p class="text-white text-sm font-medium leading-normal">PRIMARY</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent-cyan/10" href="#">
+<span class="material-symbols-outlined text-accent-amber">list</span>
+<p class="text-white text-sm font-medium leading-normal">SECONDARY</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent-cyan/10" href="#">
+<span class="material-symbols-outlined text-accent-green">task_alt</span>
+<p class="text-white text-sm font-medium leading-normal">COMPLETED</p>
+</a>
+</nav>
+<div class="flex-grow overflow-y-auto p-2">
+<div class="flex flex-col gap-2">
+<!-- List Item 1 -->
+<div class="flex gap-4 bg-accent-magenta/10 px-4 py-3 justify-between rounded-lg border border-accent-magenta/50 cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="text-accent-magenta flex items-center justify-center rounded-lg bg-[#332839] shrink-0 size-12 critical">
+<span class="material-symbols-outlined">priority_high</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal">Operation Chrome Serpent</p>
+<p class="text-accent-magenta text-sm font-normal leading-normal">Status: ACTIVE</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Infiltrate Arasaka Tower.</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-accent-magenta text-sm font-normal leading-normal">48:15:32</p>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex gap-4 bg-background-dark hover:bg-white/5 px-4 py-3 justify-between rounded-lg border border-transparent hover:border-accent-cyan/50 cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="text-accent-cyan flex items-center justify-center rounded-lg bg-[#332839] shrink-0 size-12 primary">
+<span class="material-symbols-outlined">my_location</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal">Ghost in the Machine</p>
+<p class="text-accent-cyan text-sm font-normal leading-normal">Status: AWAITING_INTEL</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Extract corporate data.</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-accent-cyan text-sm font-normal leading-normal">72:00:00</p>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex gap-4 bg-background-dark hover:bg-white/5 px-4 py-3 justify-between rounded-lg border border-transparent hover:border-accent-cyan/50 cursor-pointer">
+<div class="flex items-start gap-4">
+<div class="text-accent-amber flex items-center justify-center rounded-lg bg-[#332839] shrink-0 size-12 secondary">
+<span class="material-symbols-outlined">list</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal">Neon Alley Shadow Play</p>
+<p class="text-accent-amber text-sm font-normal leading-normal">Status: IN_PROGRESS</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Disrupt triad comms.</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-accent-amber text-sm font-normal leading-normal">12:34:56</p>
+</div>
+</div>
+<!-- List Item 4 -->
+<div class="flex gap-4 bg-background-dark hover:bg-white/5 px-4 py-3 justify-between rounded-lg border border-transparent hover:border-accent-cyan/50 cursor-pointer opacity-60">
+<div class="flex items-start gap-4">
+<div class="text-accent-green flex items-center justify-center rounded-lg bg-[#332839] shrink-0 size-12 completed">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal">Data Heist at the Spire</p>
+<p class="text-accent-green text-sm font-normal leading-normal">Status: COMPLETED</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Extract Militech schematics.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1549405645-350974864453?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzNjAzNTV8MHwxfGFsbHx8fHx8fHx8fDE3MTgxOTc5OTR8&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080');">
+<div class="h-full w-full bg-black/70 flex items-center justify-center relative">
+<!-- Mission markers on map -->
+<div class="absolute top-[25%] left-[30%]">
+<div class="relative group cursor-pointer">
+<div class="absolute -inset-1.5 bg-accent-magenta rounded-full blur opacity-75 group-hover:opacity-100 transition duration-200 animate-pulse"></div>
+<div class="relative size-6 bg-accent-magenta/80 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-black">priority_high</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-[20%] right-[40%]">
+<div class="relative group cursor-pointer">
+<div class="absolute -inset-1 bg-accent-cyan rounded-full blur opacity-75 group-hover:opacity-100 transition duration-200 animate-pulse"></div>
+<div class="relative size-4 bg-accent-cyan/80 rounded-full flex items-center justify-center"></div>
+</div>
+</div>
+<div class="absolute top-[50%] right-[25%]">
+<div class="relative group cursor-pointer">
+<div class="absolute -inset-1 bg-accent-amber rounded-full blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
+<div class="relative size-4 bg-accent-amber/80 rounded-full flex items-center justify-center"></div>
+</div>
+</div>
+<!-- Mission Detail Panel (Mockup) -->
+<div class="w-1/2 max-w-2xl bg-black/60 backdrop-blur-sm border border-accent-magenta rounded-lg p-6 text-white shadow-2xl shadow-accent-magenta/20">
+<h3 class="text-2xl font-bold text-accent-magenta tracking-wider">Operation Chrome Serpent</h3>
+<p class="text-sm text-white/70 mb-4">PRIORITY: CRITICAL // LOCATION: ARASAKA TOWER</p>
+<div class="space-y-4">
+<div>
+<h4 class="font-semibold text-accent-cyan">OBJECTIVES:</h4>
+<ul class="list-disc list-inside text-white/80 pl-2 space-y-1 mt-1">
+<li>Infiltrate corporate spire undetected.</li>
+<li>Access mainframe via terminal 7G.</li>
+<li>Deploy 'Serpent's Kiss' data worm.</li>
+<li>Extract before system purge protocol activates.</li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-accent-cyan">KNOWN RISKS:</h4>
+<p class="text-white/80 mt-1">Heavy ICE presence, elite corporate security patrols, potential for Netrunner counter-attack. High probability of lockdown if detected.</p>
+</div>
+<div>
+<h4 class="font-semibold text-accent-cyan">REWARDS:</h4>
+<p class="text-accent-green mt-1">50,000 Creds, +250 Gang Rep, Tier-A Cyberdeck Mod</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Sidebar -->
+<aside class="w-[350px] shrink-0 flex flex-col border-l border-accent-cyan/20">
+<div class="p-4 border-b border-accent-cyan/20">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-accent-cyan" data-alt="V01D_R1DER avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoxKwzMOnPbaY4wCasLTrE6In62yfHub7JpErac9WMyQ5Jf0u0E_DMolu9M1Y6QJLUAMNzWWQdmnmEE4hcOefWMuvUjAiBFmxwQ_CT-79qIfLbuIOKUyc5OkN1xjuv9HjRwknqIx3yYWoGB353zrJ_6iwpAKjo9NjQFbVJLsZIS0ZTKsp5KLxPLlf49lksF_CyGuJyG5al0oVV7ziFPjwXcgCz6fykkLNcNcnr1tf0TX1-Dy63SzP9Pz8nwmhoUhWTzf7_OBKVRg");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-medium leading-normal">V01D_R1DER</h1>
+<p class="text-accent-cyan text-sm font-normal leading-normal">Reputation: ELITE</p>
+</div>
+</div>
+<div class="mt-4 space-y-2 text-sm">
+<p><span class="text-accent-cyan font-semibold">LOADOUT:</span> Tsunami Nekomata, Unity Pistol</p>
+<p><span class="text-accent-cyan font-semibold">CYBERWARE:</span> <span class="text-accent-green">ACTIVE</span> - Sandevistan Mk.4</p>
+</div>
+</div>
+<div class="flex-grow flex flex-col p-4 overflow-hidden">
+<h3 class="text-lg font-bold text-accent-cyan mb-2 shrink-0">GLOBAL ACTIVITY FEED</h3>
+<div class="font-mono text-sm space-y-2 overflow-y-auto flex-grow">
+<p><span class="text-accent-cyan">&gt; GHOST_IN_WIRE:</span> Sector 4 patrol rerouted. Window is open.</p>
+<p><span class="text-accent-amber">&gt; SYS_ALERT:</span> Unidentified net traffic spike in Undercity grid.</p>
+<p><span class="text-accent-magenta">&gt; BOUNCER:</span> Hostile ICE detected near target mainframe. Standby.</p>
+<p><span class="text-accent-green">&gt; INTEL_DROP:</span> New cred transfer codes acquired. Check secure mail.</p>
+<p><span class="text-accent-cyan">&gt; RAZOR:</span> Extraction vehicle en route. ETA 5 mins.</p>
+<p><span class="text-accent-amber">&gt; SYS_ALERT:</span> Corporate security sweep scheduled for 0400 NCT.</p>
+<p><span class="text-accent-cyan">&gt; NIGHTHAWK:</span> Visual on target. Moving to engage.</p>
+<p><span class="text-accent-green">&gt; INTEL_DROP:</span> Arasaka exec's travel itinerary uploaded.</p>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</body></html>

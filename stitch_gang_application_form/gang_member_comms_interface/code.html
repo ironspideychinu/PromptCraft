@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NeoCity Underground Comms</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "cyan-glow": "#00FFFF",
+                        "green-glow": "#39FF14",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-cyan-glow {
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+        }
+        .text-green-glow {
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.7);
+        }
+        .border-cyan-glow {
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.5), inset 0 0 8px rgba(0, 255, 255, 0.3);
+        }
+        .border-green-glow {
+            box-shadow: 0 0 8px rgba(57, 255, 20, 0.5), inset 0 0 8px rgba(57, 255, 20, 0.3);
+        }
+        .animate-pulse-cursor {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* Add a subtle background pattern */
+        body {
+            background-image: linear-gradient(rgba(16, 22, 34, 0.95), rgba(16, 22, 34, 0.95)), 
+                              url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%231a2333" fill-opacity="0.4"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h16v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9z"/%3E%3Cpath d="M6 5V0h1v5h94V0h1v5h-6v95h6v1h-6v-5H6v5H5v-5H0V5h5V0h1v5h94V0h1v5h-6v95h6v1h-6v-5H6v5H5v-5H0V5h5z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-300">
+<div class="flex h-screen w-full antialiased overflow-hidden">
+<!-- Left Sidebar: Contacts/Channels -->
+<aside class="flex h-full w-72 flex-col border-r border-white/10 bg-black/20 backdrop-blur-sm p-4">
+<div class="flex flex-col gap-4 flex-grow">
+<!-- User Profile -->
+<div class="flex gap-3 items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Abstract neon green avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDanzcLFzEZQzQ-bqcQazFzBhMwDZzeO2NFDGvsfAYMfX5D2_B7eqchSw-KNwWDtf1P7NvvdWpSL6QcXQ4tGfKqHlkKkrwmaMPwSjcQrdEwcKsrF-CANtNZgJA6q1hl0nGsQCMpZXn2kKZGLKTT9gH3ZFSlTEJbuoPyEt1dWaLXplqxFbjr0SXSWrbPUU-vjfZWFtgQKD3g6-MHs4cDjMMvD-1-oHZEH45R3ranA_wH8qwgpKTburovfqJcQvYbJOcmnjJqn28dAA");'></div>
+<span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-glow ring-2 ring-background-dark"></span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">CYB3R_K1LL</h1>
+<p class="text-green-glow text-sm font-normal leading-normal text-xs">ONLINE</p>
+</div>
+</div>
+<!-- Search -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">search</span>
+<input class="w-full bg-[#1c2333] border border-white/10 text-sm rounded-lg focus:ring-cyan-glow focus:border-cyan-glow block pl-10 p-2.5 placeholder-gray-500 text-white" placeholder="Find or start a transmission..." type="text"/>
+</div>
+<!-- Contacts & Channels -->
+<div class="flex flex-col gap-1 overflow-y-auto pr-2">
+<p class="text-gray-500 text-xs font-bold uppercase tracking-wider px-3 py-2">Direct Transmissions</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Abstract red and blue avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTjaazQDuSlFWA0pfluj12xDaM5za348ZC5jIfrFgKDhD3ajNLC6Y_rKcfDQEL9jRkJ0MWreTvCQO9x57XNBNO57Keq5gp2QAHz5Z1UR1WFyTA2pK5Buap-a554wwseEcRMlGoEYM96JIk7E67BiXMQ5W8KaDhnX5_R-JvX1XTDQTDNmfbpXQH1BLMDMCveWZBYQOL1h_cjHmj6tojsGRDEFL_KVfI5bv6kwm5gMW2CDRa69GYlebcpaog0Qb4rWu1FuyFjSA0lA");'></div>
+<span class="absolute bottom-0 right-0 block h-2 w-2 rounded-full bg-green-glow ring-1 ring-background-dark"></span>
+</div>
+<p class="text-white text-sm font-medium leading-normal">Gl!tch</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Abstract yellow and orange avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOl4prUUm5tfFRMVW2iqSO_oWQ3dm9s3y9zffz3OJKSemZ4dIh35vcEzYxqCEzS9DLx7BWJZd8zIEanrOXwjxf6xi3fM2XwMzA9QGVwPBqpqGRcZQAkbwBn0lbHeJAG2VjwvkyEdpGC-XBUjfwTHlgCPCAvd1nFipJ_TRIPT3_rrjkP7-ebbTlaCk7FaOY7mS4m3ZsNL1AUBAlz1QzZzPFqbt-DqmUHx3TbjcZhn9c32z3QBmesu2Ywge7ACziD6XZc6QTYxztVw");'></div>
+<span class="absolute bottom-0 right-0 block h-2 w-2 rounded-full bg-gray-500 ring-1 ring-background-dark"></span>
+</div>
+<p class="text-white text-sm font-medium leading-normal">N0mad</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-cyan-glow/10 border border-cyan-glow/30" href="#">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Abstract purple and pink avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpnW5zh4m-O2Tt7tHjDcjOCmQ29MDi1aiuNbH9kdR42ci6SmQMZpt5n3uZZvbF-r7HZruPxuRVJM0ybsNSHfKLItBXgNny3aCYEMpQBotOwgyPM7SqWqUNJZnSIXbqSMwXvl7vMqsmESSJ2kLEQteghpczoIgaA8CNRlNnX_69RvAPDVjTkCMKsojqoRMT7qZOG2YjALBWkDKF-wVHip3tw_aQR1IR5A6mbutnIow2-MQ8WNaHMUD6NFJ4THyCBB3uIetD17Ptew");'></div>
+<span class="absolute bottom-0 right-0 block h-2 w-2 rounded-full bg-green-glow ring-1 ring-background-dark"></span>
+</div>
+<p class="text-white text-sm font-medium leading-normal">R4z0r</p>
+</a>
+<p class="text-gray-500 text-xs font-bold uppercase tracking-wider px-3 py-2 mt-4">Secure Channels</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-400">tag</span>
+<p class="text-white text-sm font-medium leading-normal">#safehouse-alpha</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-400">tag</span>
+<p class="text-white text-sm font-medium leading-normal">#data-heist</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-400">tag</span>
+<p class="text-white text-sm font-medium leading-normal">#neo-market-intel</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-400">inventory_2</span>
+<p class="text-white text-sm font-medium leading-normal">Archive</p>
+</a>
+</div>
+</div>
+<!-- Settings/Logout -->
+<div class="flex flex-col gap-1 border-t border-white/10 pt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-white text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-red-500">logout</span>
+<p class="text-red-500 text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex h-full flex-1 flex-col">
+<!-- Chat Header -->
+<header class="flex h-16 shrink-0 items-center justify-between border-b border-white/10 bg-background-dark/80 backdrop-blur-sm px-6">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9" data-alt="Abstract purple and pink avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXr4w-a6Z_g1B5Z6BpnAAR_XlV3iaEa4RXym3V2u1dBqooMLUO9Lmyb1QpF8BCN-OnY32JIsXMps6iefTib_zRjE606wHnE-YlUKCTXltAXZa6r4isTXqiV68EW3GUwh9eCzagW_gSoJzRw6Pv_TvzpQO0CR0EY52IHFYxZRzQO_d-gr88VgmZq27u3wIt3lX-5ck4zJPT0OGKh72jklxk578eS6arFPgpCIa9wgFafDmY8gYz3UPbzJWDOYO5HxDpRZ8rHBlm3w");'></div>
+<h2 class="text-lg font-bold text-white">Comms with: R4z0r</h2>
+</div>
+<div class="flex items-center gap-2 text-xs font-mono uppercase text-green-glow">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Link: SECURE</span>
+</div>
+</header>
+<!-- Chat Log -->
+<div class="flex flex-1 flex-col overflow-y-auto p-6 space-y-6">
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="Abstract purple and pink avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSlVoQfvMQRd4xwU3twbBUMsY9IhdHS2LbK9PZ5YEyBBW2WYKhPmHYdwSIgUnke-gTk1xUn9NPGUqmP7nrfyhECntcFgd9G54KcR-ipO-aegIP972Op6LvRvFtXRSwF0gLLLRtyfcpIS0OSuVYSeIFlUXWn7gRP1Y-Olz31G_n3itcbkkNIA1Z4B5DO8wbQuWW8dmt4s-jX-GerR5HCxNfjOZO2v6kTz64rlYgv9DmvuJSNUXuMvBqO0YqIAqTqJ9OUCJWaXGLIQ");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-gray-400 text-xs font-medium max-w-[360px]">R4z0r</p>
+<div class="relative">
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-black/30 text-white border border-green-glow/50">
+                            The drop is tonight. Midnight at the old terminal. Come alone.
+                        </p>
+</div>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-gray-400 text-xs font-medium max-w-[360px] text-right">CYB3R_K1LL</p>
+<div class="relative">
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-cyan-glow/10 text-white border border-cyan-glow/50">
+                            Confirmed. I'll be there. Any sign of CorpSec?
+                        </p>
+</div>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="Abstract neon green avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3Wg8lv8s5T-nEUo6jD5HdwKlbcVVfu3Y6m2GqETzNOTtHMOGMrlf6-zxjhGmDSbhXOlgVSYzuUAkq0IiHUiG81RNat9Pvj2I6UxRZm7UOGsBV39QWkJ8zy7hIbI0wh7O2-S1Es0C5pwlTJ7yvQ0omTppHU-Wh-d2fmZnfrtqOoHjNDUJ6EYh_6n-DCjpymThUxiLdMtpssI7BTDzhG9ydP-vyn6rMGviueuajSWbLgFKRG9SNCYLkjquh0wHa1RaXNOG2xbts1A");'></div>
+</div>
+<div class="text-center my-4">
+<p class="text-xs text-cyan-glow/70 font-mono tracking-widest">&lt;&lt;SYSTEM: AES-2048 encryption re-keyed&gt;&gt;</p>
+</div>
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="Abstract purple and pink avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQcEVapAkcCDQCO5153XDj-VDf_raCDHXpd6krJF_RfdQZtuIuVZ08JGSCEsOJLg6mN71SlRE6VoUo6arGW2w4D4S3qqF2LAiTq_RANMHuZx4ORI3uz52GyBeKWWNCz7edGiL2B1hMsV_BKAs899HQmUy0_bF7TxYz-5kpX5XigSSN4Q-Gge3bZpU33HhvhcUMHoRSbjR5IkopljHyiqTJGtaa0MXJ-Ui645Wg3J4TSImJIVAtpGzNqpshFpaqjK7B_B3Kaym_PQ");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-gray-400 text-xs font-medium max-w-[360px]">R4z0r</p>
+<div class="relative">
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-black/30 text-white border border-green-glow/50">
+                            Scans are clean for now, but stay sharp. They're deploying new ICE patrols this week.
+                        </p>
+</div>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-gray-400 text-xs font-medium max-w-[360px] text-right">CYB3R_K1LL</p>
+<div class="relative">
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-cyan-glow/10 text-white border border-cyan-glow/50">
+                            Copy that. I'm running silent.
+                        </p>
+</div>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="Abstract neon green avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX7VM1nvqq6PjU3cZVC5zniapACyW3WZNgcjyW13oz_3AzQFz96H_XeodNX_OX6m9TLg8ZmsyEQkZBDAOllYnbRFP3Kj38aYPRX6uAaBqJRBHqc1m9ukubEWTyOFvv3l4BnFF8uRwouw3_3jC1F0yfv-pNDfGNuXfFK5ujDJHCcx47CRZii0l9vtbktIY4DCfmBAqKki66bHPKeKhnDcBFVEmJLZnnsGdDnLtEv8y0-BJ8IFK6rVvYqHWCzLHfvV36FJ132YxfaQ");'></div>
+</div>
+</div>
+<!-- Message Input -->
+<footer class="mt-auto p-6">
+<div class="relative rounded-lg border border-white/10 bg-black/20 focus-within:border-cyan-glow/50 focus-within:ring-1 focus-within:ring-cyan-glow/50 transition-all">
+<input class="w-full bg-transparent border-0 pl-14 pr-28 py-3 text-white placeholder-gray-500 focus:ring-0" placeholder="Transmit secure message..." type="text"/>
+<div class="absolute inset-y-0 left-0 flex items-center pl-4">
+<button class="text-gray-400 hover:text-cyan-glow transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+<div class="absolute inset-y-0 right-0 flex items-center pr-4 gap-2">
+<button class="text-gray-400 hover:text-cyan-glow transition-colors">
+<span class="material-symbols-outlined">alternate_email</span>
+</button>
+<button class="text-gray-400 hover:text-cyan-glow transition-colors">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</button>
+<button class="text-cyan-glow transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</footer>
+</main>
+<!-- Right Sidebar: Contextual Info -->
+<aside class="flex h-full w-80 flex-col border-l border-white/10 bg-black/20 backdrop-blur-sm p-6">
+<div class="flex flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-24 border-2 border-green-glow/50" data-alt="Abstract purple and pink avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJoZbD6GWRKqMxLkurkiFB4nUTTs6NaUQN20PUJCdAEM_c7v8yLpY0pWkM2JBq2-R-99iXzTUZ5KK79SYnmWzDpG6EBAEnt8GAFUxhe1bFZLT7JhZ0FM1P1NFvDLMpr1qTyZGFO2z_jEQ9qQBelX7Sm2CQiyAaCZCFTl8i5aXCkEbxP8S6mTo6Vf3X0ujzvLhAakIlqsP2QBKXlKvZeFG9-zmoWcylb3XQ6N6WG4Q-fYgchQM5MRnq44ClxGiz2OutWFjFE5L36w");'></div>
+<h3 class="text-xl font-bold mt-4 text-white">R4z0r</h3>
+<p class="text-sm text-green-glow">Status: ACTIVE</p>
+</div>
+<div class="border-t border-white/10 my-6"></div>
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Agent Details</h4>
+<div>
+<p class="text-sm text-gray-400">Role</p>
+<p class="text-white">Netrunner / Intel</p>
+</div>
+<div>
+<p class="text-sm text-gray-400">Clearance Level</p>
+<p class="text-cyan-glow">Alpha</p>
+</div>
+<div>
+<p class="text-sm text-gray-400">Member Since</p>
+<p class="text-white">2075</p>
+</div>
+</div>
+<div class="border-t border-white/10 my-6"></div>
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Shared Files</h4>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-cyan-glow">description</span>
+<div class="flex-1">
+<p class="text-sm text-white truncate">terminal_map_v3.loc</p>
+<p class="text-xs text-gray-500">2.1MB</p>
+</div>
+</a>
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-cyan-glow">shield</span>
+<div class="flex-1">
+<p class="text-sm text-white truncate">corpsec_patrol_routes.dat</p>
+<p class="text-xs text-gray-500">876KB</p>
+</div>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</body></html>

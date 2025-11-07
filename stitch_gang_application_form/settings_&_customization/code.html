@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings &amp; Customization - NeoCity Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a60df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<aside class="w-64 flex-shrink-0 bg-[#161118]/80 backdrop-blur-sm border-r border-primary/20 hidden lg:flex">
+<div class="flex h-full min-h-[700px] flex-col justify-between p-4 w-full">
+<div class="flex flex-col gap-4">
+<div class="flex gap-3 items-center px-2 py-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar with a cyberpunk aesthetic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnDSp1EofTO9hCzEeozdQRJZ6sfvKvycQZd96TYiVcOudW0-A_TUUvI0Bq3lHXppwcF3_IEukp_n9joakFPmRAvVyxPL7eU24sEJaZGSvFdFKbRQStf3kL4iO2FgGOOD2bBZeowsnFbn1fLqics_IQZN-29j87q8IY3cUmiedOfqb_XimR5JuQAzsNFSiNHiogU71N9OKEZJ0kSN8wN8XM042oe_qt71gDTo37PkbEiKzUOLTUuhPLn1w6lmDZDKG2t9qS_nITIg");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">USER_7C4B</h1>
+<p class="text-primary/70 text-sm font-normal leading-normal">Netrunner</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">track_changes</span>
+<p class="text-sm font-medium leading-normal">Missions</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/20 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">My Crew</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/30" href="#">
+<span class="material-symbols-outlined text-primary">settings</span>
+<p class="text-white text-sm font-medium leading-normal">Settings</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-red-500/20 hover:text-red-400 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 md:p-8 lg:p-12 overflow-y-auto">
+<div class="max-w-4xl mx-auto">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 pb-6">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Settings &amp; Customization</h1>
+</div>
+<!-- Tabs -->
+<div class="pb-3">
+<div class="flex border-b border-primary/20 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-white pb-[13px] pt-4" href="#">
+<p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Interface</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-white/50 hover:text-white hover:border-b-primary/50 transition-colors duration-200 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Notifications</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-white/50 hover:text-white hover:border-b-primary/50 transition-colors duration-200 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Account</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-white/50 hover:text-white hover:border-b-primary/50 transition-colors duration-200 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Security</p>
+</a>
+</div>
+</div>
+<div class="py-8 space-y-12">
+<!-- Section: Theme Customization -->
+<div>
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Theme Customization</h3>
+<!-- ImageGrid -->
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4">
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[4/3] relative ring-2 ring-primary shadow-lg shadow-primary/20 cursor-pointer" data-alt="A dark theme with neon cyan highlights" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbQjG04qfgBzFGJSj1Zoq2_mhGLkkHyctzGYRxcZpMos53muP_veGHtuiaAqfmkEei2yvBt-VzShl9329yjsLSjttQrybTaesJtB_kYsGV3pm2LxYVykYPJVWxoC-HmhLICSaJr0AlHPknhuYctNG77cbQqyJir1ZL-fI34WL7NZJ-ebIoAhLm6m42I7RObneM55ZcnlU1msUseivuENm-aK_bhuej5QVfaxsYgExq0esd0DIpKtSYs8EtdE4mLiA6rYqiec2kaQ");'>
+<p class="text-white text-base font-bold leading-tight w-4/5 line-clamp-2">Neon Dagger</p>
+<div class="absolute top-3 right-3 bg-primary rounded-full p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-size: 16px;">check</span>
+</div>
+</div>
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[4/3] cursor-pointer hover:ring-2 ring-primary/50 transition-all duration-200" data-alt="A green and black digital theme" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnVpyfax-15qtHUv8gYCdQvrjVuDuLxT7-7aEstmD386CscDrtuZlO8DFpDjYMN3ho1K_k2wnrYEkC1mimoix8HqMRNx5d35sGRwNrUYe70TugS246ruVhssr4c7cOk57IudhcayI4XaMPumBYmssVTd670RQ1fB83ESiMjZRswvhD_WNdjUpomygbWZEzLw86cSHxW5-Zh2l0KvZPJJ9LkWIT_0naaKLRS0iCphmsWrPAc6KWFoHpfEbzsdpXXGA4ZcFsU0fE0Q");'>
+<p class="text-white text-base font-bold leading-tight w-4/5 line-clamp-2">Code Green</p>
+</div>
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[4/3] cursor-pointer hover:ring-2 ring-primary/50 transition-all duration-200" data-alt="A dark red and black aggressive theme" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxbYZXDFdISCbkb_1vzOdFHCChdugXy84dvHt9zeFs4MVZg44If8M2uFU3XNGyPbjSXQLGLPskpsG32HECReJvFnj5Pey74Yp8IfZcrUodqdFGY4DWye76uICRNMwm5WAgSB4084ZtddQMlJVizlCuSz3lJelSP740UxuXjHCaMRtQwzaUw5xDF7N79ozA1TprmNjkirdyNKTYcQq-f9QozyDAOxgW7e4k6ew5C3AtRYY-n6pSC639NbZl2z-cCpOupdBhV__nrg");'>
+<p class="text-white text-base font-bold leading-tight w-4/5 line-clamp-2">System Shock Red</p>
+</div>
+</div>
+</div>
+<!-- Section: Effects Control -->
+<div>
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-4">Effects Control</h3>
+<div class="bg-black/20 p-6 rounded-lg border border-primary/10">
+<div class="space-y-6">
+<!-- Glitch Intensity Slider -->
+<div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+<label class="text-white/80 text-sm" for="glitch-slider">UI Glitch Intensity</label>
+<div class="col-span-2 flex items-center gap-4">
+<input class="w-full h-1 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary" id="glitch-slider" max="100" min="0" type="range" value="25"/>
+<span class="text-primary font-mono text-sm">25%</span>
+</div>
+</div>
+<!-- Font Switcher -->
+<div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+<label class="text-white/80 text-sm" for="font-switcher">Terminal Font</label>
+<div class="col-span-2">
+<select class="w-full bg-black/30 border border-primary/30 text-white rounded-md focus:ring-primary focus:border-primary" id="font-switcher">
+<option>Space Grotesk</option>
+<option>Share Tech Mono</option>
+<option>Roboto Mono</option>
+</select>
+</div>
+</div>
+<!-- Toggle Switches -->
+<div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+<p class="text-white/80 text-sm">Visual Effects</p>
+<div class="col-span-2 flex flex-col sm:flex-row gap-4">
+<label class="inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-11 h-6 bg-primary/30 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-3 text-sm font-medium text-white/90">Scanline Overlay</span>
+</label>
+<label class="inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-11 h-6 bg-primary/30 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-3 text-sm font-medium text-white/90">Boot-up Animation</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Save Button -->
+<div class="flex justify-end pt-4">
+<button class="bg-primary text-white font-bold py-2 px-6 rounded-lg hover:bg-primary/80 transition-colors duration-200 flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 20px;">save</span>
+                                Save Changes
+                            </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

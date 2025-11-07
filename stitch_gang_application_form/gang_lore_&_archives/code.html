@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEOCITY VANGUARDS - Gang Lore &amp; Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a60df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<aside class="w-64 flex-shrink-0 bg-[#161118]/80 backdrop-blur-sm border-r border-primary/20">
+<div class="flex h-full min-h-[700px] flex-col justify-between p-4">
+<div class="flex flex-col gap-4">
+<div class="flex gap-3 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="Stylized logo of NEOCITY VANGUARDS" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWQ1_BCdC69mW04txL04J_d_2QXIU_bNNeApKayeJIjj9d73k4kvkI5pxAPygMkas1E86noe6iHA5ZMEgm0AG_WFNhNKvB0n-p1h5ZoObKbvlStz7oizX7P6aS_On-kZxNFnRGoHHEiK9H6bUayqhmyLKo2VhQohsYuT_BizLaxwtOyTrFPp6k099Fo8Ht9gijFAz9NC65vx5x2seC-s5fisRX_oOgO7q4SSmKEKXUi1Ppv8aZLk5GRsoaK2msDQeMrTF8hDZd9Q");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">NEOCITY VANGUARDS</h1>
+<p class="text-[#b09cba] text-sm font-normal leading-normal">Classified Archives</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-white hover:bg-primary/30 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">shield_person</span>
+<p class="text-sm font-medium leading-normal">Recruitment</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/30 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">target</span>
+<p class="text-sm font-medium leading-normal">Missions</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/30 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">security</span>
+<p class="text-sm font-medium leading-normal">Safehouse</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/30 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:bg-primary/30 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<div class="max-w-4xl mx-auto">
+<!-- PageHeading -->
+<header class="flex flex-wrap justify-between gap-3 mb-6">
+<div class="flex min-w-72 flex-col gap-3">
+<h1 class="text-white text-4xl font-bold leading-tight tracking-[-0.033em]">GANG LORE &amp; ARCHIVES</h1>
+<p class="text-[#b09cba] text-base font-normal leading-normal">Accessing classified data stream... Authenticated.</p>
+</div>
+</header>
+<!-- SearchBar -->
+<div class="mb-8">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#b09cba] flex bg-[#332839] items-center justify-center pl-4 rounded-l-lg border-2 border-r-0 border-primary/20 focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-0 border-2 border-l-0 border-primary/20 bg-[#332839] focus:border-primary transition-colors h-full placeholder:text-[#b09cba] px-4 text-base font-normal leading-normal" placeholder="Search archives by keyword, name, date..." value=""/>
+</div>
+</label>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<!-- Key Figures Section -->
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b-2 border-primary/20 mb-4">KEY FIGURES</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<!-- Character Card 1 -->
+<div class="group relative overflow-hidden rounded-xl border border-primary/20 bg-[#161118]/50 p-4 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Portrait of a hooded figure in neon-lit shadows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAroyYTwxwHy71TPSak1NzSIEF9aI1xGCgbaQcyqi-7_hToDwaXrvaFmgFIsse1yzoXgWEk9WpPYPkpuQnUEDrIUJyyqDUMaslbTEGWkoF_Tf5pVjqHrNcXQaeHnN77j98nrmgpzI9bsrTgOpmjzESnP6Zv_7pSZQIAyhIlg7yyBJtqdgPhtdNLT3H-jhfbBxDOlLarCDZTTrXJkoH1N8U1hfC-G4rf7Se78VJHoMCPc3-QIg5CDOBRL7ToE5-12GyDr55zYVV3vw");'></div>
+<div class="absolute bottom-4 left-4 right-4">
+<h3 class="text-white text-lg font-bold">Kaelen "Wraith"</h3>
+<p class="text-primary text-sm">Founder</p>
+</div>
+</div>
+<!-- Character Card 2 -->
+<div class="group relative overflow-hidden rounded-xl border border-primary/20 bg-[#161118]/50 p-4 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Portrait of a woman with cybernetic eye enhancements" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLHjUMa-kUH5hBT_jzt1ohgVhHBE_arov9FUiDsKC6uZcfePIQdwDzn5kpnpOTb9jXp3MBg_r3wAciyoA0X9vdW6aoTQRA71xztEaY4odRBNQnNqIjDsJYe20nsHsyY6ffv_s_h1ybgz5i4H2f0Ndpa4Vn95uDIj0uoyGy156qR_4QaXwvODmP5NCYtprOHwpAc4hSBqgNMLjZmDaS84JHGYjxDLs8ijW_zK8n9qeqdVG1ezTJunM4iJEXNPE2Wv5h3K5lZ6KhCw");'></div>
+<div class="absolute bottom-4 left-4 right-4">
+<h3 class="text-white text-lg font-bold">Anya "Glitch"</h3>
+<p class="text-primary text-sm">Netrunner</p>
+</div>
+</div>
+<!-- Character Card 3 -->
+<div class="group relative overflow-hidden rounded-xl border border-primary/20 bg-[#161118]/50 p-4 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Portrait of a heavily augmented street samurai" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBv30uUf0qbbfv7eY6zYyQBYFcor4f_JOzWrrEKk0cdHWoZueWcqiTHCt-JJ5sGHX0yAkPRZL8utPHnwn36OM0CLDIikZaxnkUGNEiTir9FCLhg-n3bozakQlLh-yX73cT7IsY3y-Z4BKV-XRn5jACywfClTWfDfSPwyqZzz2ig5P89KwStdGrchpoxumwLFw88Gws1UYUoyQkv4HXvY5-v9D7XBaychYLbXsO-wmPlT1ThdIl3ry1tYNloxF9sQrY9jXKsYhfJqQ");'></div>
+<div class="absolute bottom-4 left-4 right-4">
+<h3 class="text-white text-lg font-bold">Ryo "Breaker"</h3>
+<p class="text-primary text-sm">Enforcer</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Manifesto Section -->
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b-2 border-primary/20 mb-4">MANIFESTO</h2>
+<div class="bg-[#161118]/50 border border-primary/20 p-6 rounded-xl">
+<p class="text-[#b09cba] text-base font-normal leading-relaxed">We are the shadows in NeoCity's neon glare. We operate where corporate law ends and the real power begins. Our code is simple: loyalty to the Vanguard, power to the streets, and a byte for every soul the corps have stolen. We are not just a gang; we are the system's antibody. Join us, and reclaim your future.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<!-- SectionHeader and Timeline -->
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b-2 border-primary/20 mb-4">EVENT TIMELINE</h2>
+<div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
+<!-- Timeline Item 1 -->
+<div class="flex flex-col items-center gap-1 pt-3">
+<div class="text-primary"><span class="material-symbols-outlined">groups</span></div>
+<div class="w-[1.5px] bg-[#4c3b54] h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-white text-base font-medium leading-normal">Formation</p>
+<p class="text-[#b09cba] text-base font-normal leading-normal">Cycle 2071</p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[1.5px] bg-[#4c3b54] h-2"></div>
+<div class="text-primary"><span class="material-symbols-outlined">local_police</span></div>
+<div class="w-[1.5px] bg-[#4c3b54] h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-white text-base font-medium leading-normal">The Neon Heist</p>
+<p class="text-[#b09cba] text-base font-normal leading-normal">Cycle 2074</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[1.5px] bg-[#4c3b54] h-2"></div>
+<div class="text-primary"><span class="material-symbols-outlined">swords</span></div>
+<div class="w-[1.5px] bg-[#4c3b54] h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-white text-base font-medium leading-normal">Sector 5 Skirmish</p>
+<p class="text-[#b09cba] text-base font-normal leading-normal">Cycle 2076</p>
+</div>
+<!-- Timeline Item 4 -->
+<div class="flex flex-col items-center gap-1 pb-3">
+<div class="w-[1.5px] bg-[#4c3b54] h-2"></div>
+<div class="text-primary"><span class="material-symbols-outlined">memory</span></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-white text-base font-medium leading-normal">Technological Acquisition</p>
+<p class="text-[#b09cba] text-base font-normal leading-normal">Cycle 2077</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

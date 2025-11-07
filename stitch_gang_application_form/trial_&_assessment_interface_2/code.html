@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recruitment Protocol // Synaptic Audit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Fira+Code:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .animate-pulse-fast {
+                animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+            .animate-scanline {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: theme('colors.primary');
+                box-shadow: 0 0 10px theme('colors.primary');
+                animation: scan 4s linear infinite;
+                opacity: 0.7;
+            }
+            @keyframes scan {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(100vh); }
+            }
+            .glitch-text {
+                position: relative;
+                color: theme('colors.text-main');
+                text-shadow:
+                    0.05em 0 0 rgba(0, 255, 255, 0.75),
+                    -0.025em -0.05em 0 rgba(255, 0, 255, 0.75),
+                    0.025em 0.05em 0 rgba(57, 255, 20, 0.75);
+            }
+            .data-stream-text {
+                text-shadow: 0 0 5px theme('colors.accent-terminal');
+            }
+            .pulsate-neon {
+                box-shadow: 0 0 8px theme('colors.primary'), 0 0 16px theme('colors.primary'), 0 0 24px theme('colors.primary');
+                animation: pulse-neon 2s infinite;
+            }
+            @keyframes pulse-neon {
+              0%, 100% {
+                box-shadow: 0 0 8px theme('colors.primary'), 0 0 16px theme('colors.primary'), 0 0 24px theme('colors.primary');
+              }
+              50% {
+                box-shadow: 0 0 12px theme('colors.primary'), 0 0 24px theme('colors.primary'), 0 0 36px theme('colors.primary');
+              }
+            }
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#00FFFF","background-light": "#101214","background-dark": "#101214","accent-secondary": "#FFD700","accent-terminal": "#39FF14","accent-error": "#FF00FF","text-main": "#EAEAEA",
+              "text-secondary": "#9cabba",
+              "border-color": "#283039",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "mono": ["Fira Code", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+                'glow-primary': '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF',
+                'glow-secondary': '0 0 5px #FFD700, 0 0 10px #FFD700',
+                'glow-error': '0 0 5px #FF00FF, 0 0 10px #FF00FF',
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-dark text-text-main font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-8 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDe12jQNDlSROkQRzU2DBJaqeDnbRDJzYmAqji-j6oUGLFTDuKIls0btjDgVIQQ6TvBOSL3fXnpghJKr5bqMV2VDWQXhkz1bmGoZTP28RkFnqAxrpV0gG3DmMwet7kJFQZ6XUxcB0lFhm-7RxirAzGnFLCjghtFtDRP4PEWvX5FcC59Zvws6QpR6G_i39EhTrnPtv84vvmpl1BXA-T8M3ssGumqrCNaxmLxzATyHmzAimplcsa0paHWju85_AFmzFR5ftDtcafiRw');"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark"></div>
+<div class="animate-scanline z-10"></div>
+<div class="relative z-10 flex w-full max-w-7xl flex-col gap-6 lg:flex-row">
+<aside class="w-full lg:w-1/4 flex flex-col gap-6">
+<div class="border border-border-color bg-black/50 p-4 rounded-lg backdrop-blur-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-accent-terminal/50"></div>
+<h3 class="font-mono-custom text-accent-terminal text-sm uppercase">// System Status</h3>
+<div class="mt-4 h-64 space-y-2 overflow-y-auto font-mono-custom text-sm data-stream-text">
+<p><span class="text-accent-terminal">&gt;</span> BOOTING RECRUITMENT_PROTOCOL_V2.3...</p>
+<p><span class="text-accent-terminal">&gt;</span> ESTABLISHING SECURE CONNECTION...</p>
+<p class="text-primary">&gt; CONNECTION ESTABLISHED.</p>
+<p><span class="text-accent-terminal">&gt;</span> LOADING MODULE: SYNAPTIC_AUDIT...</p>
+<p><span class="text-accent-terminal">&gt;</span> VERIFYING BIOMETRIC SIGNATURE...</p>
+<p class="text-primary animate-pulse-fast">&gt; SIGNATURE VERIFIED: CANDIDATE_774.</p>
+<p><span class="text-accent-terminal">&gt;</span> INITIATING PHASE 2.</p>
+<p class="text-accent-secondary">&gt; WARNING: NEURAL LINK UNSTABLE.</p>
+<p class="text-accent-error animate-pulse">&gt; ALERT: DATA FRAGMENTATION DETECTED.</p>
+<p><span class="text-accent-terminal">&gt;</span> AWAITING CANDIDATE INPUT...</p>
+<p><span class="text-accent-terminal">&gt;</span> 01001011 01000101 01011001 01010011</p>
+<p><span class="text-accent-terminal">&gt;</span> DECRYPTION MODULE ACTIVE...</p>
+</div>
+</div>
+<div class="border border-border-color bg-black/30 p-4 rounded-lg backdrop-blur-sm">
+<h3 class="font-mono-custom text-accent-secondary text-sm uppercase">// Time Remaining</h3>
+<div class="flex gap-2 sm:gap-4 py-4">
+<div class="flex grow basis-0 flex-col items-stretch gap-2">
+<div class="flex h-12 sm:h-14 grow items-center justify-center rounded-lg px-3 bg-[#283039]"><p class="text-text-main text-lg font-bold tracking-[-0.015em]">00</p></div>
+<div class="flex items-center justify-center"><p class="text-text-secondary text-xs sm:text-sm font-normal">Hours</p></div>
+</div>
+<div class="flex grow basis-0 flex-col items-stretch gap-2">
+<div class="flex h-12 sm:h-14 grow items-center justify-center rounded-lg px-3 bg-[#283039]"><p class="text-text-main text-lg font-bold tracking-[-0.015em]">04</p></div>
+<div class="flex items-center justify-center"><p class="text-text-secondary text-xs sm:text-sm font-normal">Minutes</p></div>
+</div>
+<div class="flex grow basis-0 flex-col items-stretch gap-2">
+<div class="flex h-12 sm:h-14 grow items-center justify-center rounded-lg px-3 bg-accent-error/20 border border-accent-error shadow-glow-error animate-pulse"><p class="text-accent-error text-lg font-bold tracking-[-0.015em]">59</p></div>
+<div class="flex items-center justify-center"><p class="text-accent-error text-xs sm:text-sm font-normal">Seconds</p></div>
+</div>
+</div>
+</div>
+</aside>
+<main class="w-full lg:w-1/2 flex-1 flex flex-col border-2 border-primary shadow-glow-primary bg-black/50 rounded-lg backdrop-blur-sm">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/50 px-6 py-4">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-5 animate-pulse-fast">
+<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0L7.18 9.83a.75.75 0 01-.58.58L.02 11.49c-1.56.38-1.56 2.6 0 2.98l6.58 1.51a.75.75 0 01.58.58l1.51 6.58c.38 1.56 2.6 1.56 2.98 0l1.51-6.58a.75.75 0 01.58-.58l6.58-1.51c1.56-.38 1.56-2.6 0-2.98L12.65 10.4a.75.75 0 01-.58-.58L10.51 3.17z" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-primary text-base sm:text-lg font-bold tracking-[-0.015em] uppercase">SYNAPTIC AUDIT // IN PROGRESS</h2>
+</div>
+</header>
+<div class="flex-grow flex flex-col p-6">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-center"><p class="text-text-main text-base font-medium">Trial Integrity</p> <p class="text-primary text-sm font-normal font-mono-custom">25%</p></div>
+<div class="rounded bg-[#3b4754] h-3 overflow-hidden p-0.5"><div class="h-full rounded-sm bg-primary pulsate-neon" style="width: 25%;"></div></div>
+<p class="text-primary text-sm font-normal font-mono-custom animate-pulse-fast">&gt; Stage 1: Cognitive Analysis</p>
+</div>
+<div class="flex-grow flex flex-col items-center justify-center text-center mt-6">
+<h1 class="text-text-main tracking-tight text-3xl sm:text-4xl font-bold glitch-text">DECRYPT THE SEQUENCE</h1>
+<p class="text-text-secondary text-base font-normal max-w-md mx-auto mt-2">
+                        Isolate the anomalous glyph. Connection integrity failing. Swift execution is paramount.
+                    </p>
+<div class="grid grid-cols-5 gap-4 my-8">
+<div class="aspect-square flex items-center justify-center bg-transparent border-2 border-primary/30 rounded-lg text-4xl font-mono-custom text-primary/70 hover:border-primary hover:text-primary hover:bg-primary/10 transition-colors cursor-pointer hover:shadow-glow-primary">Δ</div>
+<div class="aspect-square flex items-center justify-center bg-transparent border-2 border-primary/30 rounded-lg text-4xl font-mono-custom text-primary/70 hover:border-primary hover:text-primary hover:bg-primary/10 transition-colors cursor-pointer hover:shadow-glow-primary">Ψ</div>
+<div class="aspect-square flex items-center justify-center bg-accent-error/20 border-2 border-accent-error rounded-lg text-4xl font-mono-custom text-accent-error shadow-glow-error transition-colors cursor-pointer animate-pulse">Z</div>
+<div class="aspect-square flex items-center justify-center bg-transparent border-2 border-primary/30 rounded-lg text-4xl font-mono-custom text-primary/70 hover:border-primary hover:text-primary hover:bg-primary/10 transition-colors cursor-pointer hover:shadow-glow-primary">Ω</div>
+<div class="aspect-square flex items-center justify-center bg-transparent border-2 border-primary/30 rounded-lg text-4xl font-mono-custom text-primary/70 hover:border-primary hover:text-primary hover:bg-primary/10 transition-colors cursor-pointer hover:shadow-glow-primary">Σ</div>
+</div>
+<div class="w-full max-w-sm flex flex-col gap-4">
+<div class="relative">
+<input class="w-full bg-black/50 border-2 border-border-color rounded font-mono-custom text-accent-terminal placeholder:text-text-secondary/50 focus:ring-1 focus:ring-primary focus:border-primary transition-all pr-10 pl-4 py-3" placeholder="&gt; EXECUTE_COMMAND" type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-primary animate-pulse-fast">data_object</span>
+</div>
+<button class="w-full bg-primary text-background-dark font-bold py-3 px-6 rounded hover:bg-white hover:shadow-glow-primary transition-all duration-300 flex items-center justify-center gap-2 group">
+<span class="glitch-text text-background-dark group-hover:text-primary transition-colors">SUBMIT &amp; EXECUTE</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<footer class="border-t border-primary/50 px-6 py-3 flex justify-between items-center">
+<p class="text-xs text-primary/70 font-mono-custom">STATUS: AWAITING INPUT...</p>
+<p class="text-xs text-text-secondary/70 font-mono-custom">SYS_ID: NC-RECRUIT-774</p>
+</footer>
+</main>
+<aside class="w-full lg:w-1/4 flex flex-col gap-6">
+<div class="border border-border-color bg-black/50 p-4 rounded-lg backdrop-blur-sm">
+<h3 class="font-mono-custom text-primary text-sm uppercase">// Candidate Profile</h3>
+<div class="mt-4 space-y-3 font-mono-custom text-sm">
+<p><span class="text-text-secondary w-24 inline-block">ID:</span> <span class="text-text-main">CANDIDATE_774</span></p>
+<p><span class="text-text-secondary w-24 inline-block">RANK:</span> <span class="text-text-main">UNASSIGNED</span></p>
+<p><span class="text-text-secondary w-24 inline-block">STATUS:</span> <span class="text-accent-secondary animate-pulse-fast">UNDERGOING TRIAL</span></p>
+<p><span class="text-text-secondary w-24 inline-block">LOCATION:</span> <span class="text-text-main">SECTOR_GAMMA</span></p>
+</div>
+</div>
+<div class="border border-border-color bg-black/50 p-4 rounded-lg backdrop-blur-sm">
+<h3 class="font-mono-custom text-accent-error text-sm uppercase">// System Actions</h3>
+<div class="mt-4 flex flex-col gap-3">
+<button class="w-full text-left flex items-center gap-3 p-3 rounded bg-border-color/50 hover:bg-primary/20 hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-xl transition-transform group-hover:rotate-12">help</span>
+<span class="font-bold">Request Hint</span>
+</button>
+<button class="w-full text-left flex items-center gap-3 p-3 rounded bg-border-color/50 hover:bg-accent-error/20 hover:text-accent-error transition-colors group">
+<span class="material-symbols-outlined text-xl transition-transform group-hover:scale-110">power_settings_new</span>
+<span class="font-bold">Terminate Session</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+
+</body></html>

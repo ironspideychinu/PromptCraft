@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NeoCity Gang - Territory Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .cyber-glow {
+            box-shadow: 0 0 5px #258cf4, 0 0 10px #258cf4, 0 0 15px #258cf4;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Header -->
+<header class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-10 py-3 bg-background-dark/80 backdrop-blur-sm font-display">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs></svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] uppercase">NEOCITY GANG</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Missions</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Roster</a>
+</nav>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary border border-primary hover:bg-primary hover:text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Logout</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User avatar with a cyberpunk aesthetic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpMe79Kyvr0JQ5Toyh3-Dtgi1weEzMuoAkxhJn5dKbxApJd_-GcHu1gEgsVp0n6aL3dNN0Ce1UVzPXCiY9_3xzGbb9dTs1S9X7vqqC-bRd3Fp6LYsoqEnZE8-KpDzIgezqK2pykeAL0u3DJmb_m31c2Si6Iiu948SEoiI2hAULwklp3p5Ijzy6oVioYbrWQXtwDQNnZ5zkKzE8bk2CGwPfJ3XyZ539NIjAU7qtclACnmyfGGOJBFthqKNZLhmbmoJrpxMBfXgB4Q");'></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col justify-center items-center p-4 pt-20">
+<div class="w-full max-w-7xl flex-1 flex flex-col lg:flex-row gap-6">
+<!-- Map Section -->
+<div class="flex-1 flex flex-col rounded-lg border border-primary/20 bg-background-dark/50">
+<div class="relative @container flex flex-col h-full flex-1">
+<div class="flex flex-1 flex-col">
+<div class="bg-cover bg-center flex min-h-[320px] flex-1 flex-col justify-between p-4 @[480px]:rounded-lg" data-alt="A dark, stylized cyberpunk map of NeoCity with glowing blue and pink territorial lines." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDa5GIDv4ZvXPI8tsmBG7Nhbj3pzYPTaJ_C3cbF4QVvUE8FwkdiC48P9D98_ibNm8Vx0Vrn-zUF-iV6ysleMl1yjSXAzrS83a4RyzLqMNfqvhrfBx3402vkcuKI4htU2xCfq5EEnfu6Tcrs1fEXXl0RbIt3sbpnxBziU0wtGiChM2OlPydQAi1Y_wQkEFtm4QXO8MG6eo_x_ST0orAwhiWmudJhtrL_U8moGrmQN_wPzrHeGXRA8V8nLiHU7fMHCDSKvvnz4yHqkw");'>
+<label class="flex flex-col min-w-40 h-12 self-start w-full max-w-sm">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-primary/30">
+<div class="text-primary flex bg-background-dark/80 items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-background-dark/80 focus:border-none h-full placeholder:text-white/40 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search sectors, strongholds..." value=""/>
+</div>
+</label>
+<div class="flex flex-col items-end gap-3">
+<div class="flex flex-col gap-0.5">
+<button class="flex size-10 items-center justify-center rounded-t-lg bg-background-dark/80 border border-b-0 border-primary/30 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-b-lg bg-background-dark/80 border border-primary/30 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">remove</span>
+</button>
+</div>
+<button class="flex size-10 items-center justify-center rounded-lg bg-background-dark/80 border border-primary/30 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">my_location</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Info Panel Section -->
+<div class="w-full lg:w-96 flex flex-col gap-6">
+<!-- Card -->
+<div class="border border-primary/20 rounded-lg bg-background-dark/50 p-1 cyber-glow">
+<div class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-md" data-alt="A gritty, neon-lit view of the Kowloon Sector at night." style='background-image: linear-gradient(0deg, rgba(16, 25, 34, 0.8) 0%, rgba(16, 25, 34, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQ0SpJSeAVENtIHSucXCQIhcfpxmFh40HEd0Gme5hftt89DK4d46iUtrbYLuswIpIwNN2_rYhlBZR1WTPDDMQunCc5dgklK7RDVLBVsk9PUVa0wM6Ud3a8BQHj7PbXVD-4mIy41OALKSkGcU-QCvceLOa9hEW1Sc0g-vq6Bjvith1AGh2HJK57rxb_asDBIfEcBVl9mR1MhL2sj8NOcpENHKMOERZG22rg53XzZhCQ6OcbTEmX69JXjyRXXDI_hyCKPtgFEXRPrg");'>
+<div class="flex w-full flex-col gap-4 p-4">
+<div class="flex max-w-[440px] flex-1 flex-col gap-2">
+<p class="text-primary text-sm font-medium leading-normal uppercase tracking-widest">Kowloon Sector</p>
+<p class="text-white tracking-light text-2xl font-bold leading-tight max-w-[440px]">Controlling Faction: The Vipers</p>
+<p class="text-white/70 text-base font-medium leading-normal">Key Asset: Black Market Comms Hub</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex gap-4 justify-between items-center">
+<p class="text-white text-base font-medium leading-normal">Influence Level</p>
+<p class="text-primary text-sm font-bold leading-normal">85%</p>
+</div>
+<div class="rounded-full bg-primary/20 h-2"><div class="h-2 rounded-full bg-primary" style="width: 85%;"></div></div>
+</div>
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-all">
+<span class="truncate">View Available Missions</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Map Legend -->
+<div class="flex flex-col gap-4 border border-primary/20 rounded-lg p-4 bg-background-dark/50">
+<h3 class="text-lg font-bold text-white uppercase tracking-wider">Map Legend</h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 rounded border-2 border-primary cyber-glow"></div>
+<span class="text-sm font-medium text-white/90">Your Territory</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 rounded border-2" style="border-color: #FF00FF; box-shadow: 0 0 5px #FF00FF;"></div>
+<span class="text-sm font-medium text-white/90">Rival Turf</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 rounded border-2" style="border-color: #39FF14; box-shadow: 0 0 5px #39FF14;"></div>
+<span class="text-sm font-medium text-white/90">Neutral Zone</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+<span class="text-sm font-medium text-white/90">Stronghold</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">adjust</span>
+<span class="text-sm font-medium text-white/90">Point of Interest</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
